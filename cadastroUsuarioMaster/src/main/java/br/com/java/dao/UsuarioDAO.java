@@ -16,7 +16,12 @@ public class UsuarioDAO extends AbstractDAO<Usuario>{
 		super();
 		
 		lista = new ArrayList<Usuario>();
+		criaLista(lista);
 	}
+	 private void criaLista(List<Usuario> lista) {
+//		    lista.add(new Usuario("Fernando", "Rua sem esquina, n. 1"));
+//		    lista.add(new Usuario("Beatriz", "Rua com esquina, n. 4"));
+		   }
 
 	
 	public List<Usuario> getLista() {
