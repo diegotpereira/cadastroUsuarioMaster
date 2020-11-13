@@ -1,12 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sucesso</title>
+<title>Usuários do Sistema</title>
 </head>
 <body>
-    <h1>Usuário cadastrado com sucesso</h1>
+    <jsp:useBean id="dao" class="br.com.java.dao.UsuarioDAO"/>
+     <h1> Lista de Usuários do Sistema</h1>
+  <table border="1">
+    <c:forEach var="usuario" items="${dao.lista}">
+      <tr>
+        <td>${usuario.nome}</td>
+        <td>${usuario.endereco}</td>
+      </tr>
+    </c:forEach>
+  </table>
 </body>
 </html>
