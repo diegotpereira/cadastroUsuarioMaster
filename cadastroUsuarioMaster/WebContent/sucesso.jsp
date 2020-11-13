@@ -12,7 +12,16 @@
     <jsp:useBean id="dao" class="br.com.java.dao.UsuarioDAO"/>
      <h1> Lista de Usuários do Sistema</h1>
   <table border="1">
+  
+        <tr>
+            
+            <th> Nome </th>
+            <th> Endereço</th>
+ 
+        </tr>
     <c:forEach var="usuario" items="${dao.lista}">
+    
+      
       <tr>
         <td>${usuario.nome}</td>
         <td>${usuario.endereco}</td>
