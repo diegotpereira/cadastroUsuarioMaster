@@ -1,6 +1,8 @@
 package br.com.java;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -41,6 +43,14 @@ public class CadastraUsuarioServlet extends HttpServlet {
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/sucesso.jsp");
 		rd.forward(request, response);
+	}
+	
+	protected void listarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		List<Usuario> listarUsuario = dao.getLista();
+		request.setAttribute("listarUsuario", listarUsuario);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/sucesso.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
