@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class FabricaConexao {
 	
-	String driver = "com.mysql.jdbc.Driver";
-	String url = "jdbc:mysql://localhost:3306/devmedia";
+	String driver = "com.mysql.cj.jdbc.Driver";
+	String url = "jdbc:mysql://localhost:3306/dbcadastrousuariomaster?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
 	String usuario = "root";
 	String senha = "root";
 	
